@@ -1,0 +1,50 @@
+.wrapper { display: flex; align-items: center; }
+.centered { justify-content: center; padding: 32px; }
+
+.spinner {
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent-primary);
+  animation: spin 0.7s linear infinite;
+}
+
+.sm { width: 16px; height: 16px; }
+.md { width: 24px; height: 24px; }
+.lg { width: 36px; height: 36px; }
+
+.page {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.logoMark {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-primary);
+  letter-spacing: -0.02em;
+}
+
+.spinnerLg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent-primary);
+  animation: spin 0.7s linear infinite;
+}
+
+.loadingText {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -1,0 +1,46 @@
+.container { display: flex; flex-direction: column; gap: 6px; }
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: var(--font-body);
+  padding: 10px 36px 10px 14px;
+  transition: all var(--transition-fast);
+  outline: none;
+  cursor: pointer;
+}
+
+.select option { background: var(--bg-elevated); color: var(--text-primary); }
+.select:focus { border-color: var(--accent-primary); box-shadow: 0 0 0 3px var(--accent-primary-glow); background: var(--bg-overlay); }
+.select:hover:not(:focus) { border-color: var(--border-bright); }
+
+.hasError .select { border-color: var(--accent-red); }
+
+.chevron {
+  position: absolute;
+  right: 12px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.error { font-size: 12px; color: var(--accent-red); }
+.hint { font-size: 12px; color: var(--text-muted); }

@@ -1,0 +1,52 @@
+.page {
+  padding: 20px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.legendLabel {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.legendStep {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.legendArrow { color: var(--text-muted); }
+
+.legendNote { color: var(--text-muted); font-size: 11px; }
+
+.board {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  align-items: stretch;
+}
+
+.board::-webkit-scrollbar { height: 6px; }
+.board::-webkit-scrollbar-track { background: transparent; }
+.board::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+
+@media (max-width: 900px) {
+  .page { padding: 16px; overflow: auto; }
+  .board { flex-direction: column; overflow: visible; }
+}
