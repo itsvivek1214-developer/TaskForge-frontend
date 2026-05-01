@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
+const BASE_URL = process.env.REACT_APP_API_URL || 'https://taskforge-backend-6xmv.onrender.com';
 
 const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL:"https://taskforge-backend-6xmv.onrender.com",
   headers: { 'Content-Type': 'application/json' },
 });
 
