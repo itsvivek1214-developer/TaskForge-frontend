@@ -116,10 +116,12 @@ const TaskForm = ({ isOpen, onClose, task = null }) => {
     setLoading(true);
     try {
       const payload = {
-        ...form,
-        title: form.title.trim(),
-        description: form.description.trim(),
-        deadline: form.deadline || null,
+          ...form,
+          title: form.title.trim(),
+          description: form.description.trim(),
+          deadline: form.deadline
+          ? new Date(form.deadline).toISOString()
+          : null,
       };
       if (isEdit) {
         await updateTask(task.id, payload);
