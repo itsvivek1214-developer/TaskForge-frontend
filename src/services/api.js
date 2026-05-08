@@ -34,24 +34,24 @@ api.interceptors.response.use(
 
 // ─── Auth ───────────────────────────────────────────────────
 export const authAPI = {
-  register: (data) => api.post('/auth/register', data),
-  login: (data) => api.post('/auth/login', data),
+  register: (data) => api.post('/api/auth/register', data),
+  login: (data) => api.post('/api/auth/login', data),
 };
 
 // ─── Tasks ──────────────────────────────────────────────────
 export const tasksAPI = {
-  getAll: (params) => api.get('/tasks', { params }),
-  getById: (id) => api.get(`/tasks/${id}`),
-  create: (data) => api.post('/tasks', data),
-  update: (id, data) => api.put(`/tasks/${id}`, data),
-  delete: (id) => api.delete(`/tasks/${id}`),
-  updateStatus: (id, status) => api.patch(`/tasks/${id}/status`, { status }),
+  getAll: (params) => api.get('/api/tasks', { params }),
+  getById: (id) => api.get(`/api/tasks/${id}`),
+  create: (data) => api.post('/api/tasks', data),
+  update: (id, data) => api.put(`/api/tasks/${id}`, data),
+  delete: (id) => api.delete(`/api/tasks/${id}`),
+  updateStatus: (id, status) => api.patch(`/api/tasks/${id}/status`, { status }),
 };
 
 // ─── AI ─────────────────────────────────────────────────────
 export const aiAPI = {
-  prioritize: (data) => api.post('/tasks/prioritize', data),
-  suggest: (data) => api.post('/tasks/suggest', data),
+  prioritize: (data) => api.post('/api/tasks/prioritize', data),
+  suggest: (data) => api.post('/api/tasks/suggest', data),
 };
 
 export default api;
